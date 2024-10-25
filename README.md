@@ -1,26 +1,30 @@
-#Trabalho SO2
-##Programas para:#
-###
-Calcular a quantidade de números primos dentro de um vetor 100 ou 1000 posições, utilizando entre 1 e 4 processos/treads.
-1. Utilizando memória compartilhada entre processos; 
-2. Utilizando troca de mensagens entre processos;
-3. Utilizando threads.
-###
+# Trabalho SO2
 
-##Instalação MPI para compilar programa 2:#
-###sudo apt install mpich##
+## Programas para calcular a quantidade de números primos dentro de um vetor de 100 ou 1000 posições, utilizando entre 1 e 4 processos/threads:
+1. **Utilizando memória compartilhada entre processos**  
+2. **Utilizando troca de mensagens entre processos**  
+3. **Utilizando threads**  
 
-##Para compilar e rodar cada programa:#
-###
-Programa 1: 
-gcc memoriaCompartilhada.c -o memoriaCompartilhada -lm
-time ./memoriaCompartilhada <qtd de Processos> <tamanho do vetor>
+## Instalação do MPI para compilar o programa 2:
+```bash
+sudo apt install mpich
+```
 
-Programa 2: 
-mpicc -o trocaMensagens trocaMensagens.c -lm
-time ./trocaMensagens 4 1000
+## Para compilar e rodar cada programa:
+- **Programa 1:**
+  ```bash
+  gcc memoriaCompartilhada.c -o memoriaCompartilhada -lm
+  time ./memoriaCompartilhada <qtd de Processos> <tamanho do vetor>
+  ```
 
-Programa 3: 
-gcc -o threads threads.c -lpthread -lm
-time ./threads 4 1000
-###
+- **Programa 2:**
+  ```bash
+  mpicc -o trocaMensagens trocaMensagens.c -lm
+  time ./trocaMensagens <qtd de Processos> <tamanho do vetor>
+  ```
+
+- **Programa 3:**
+  ```bash
+  gcc -o threads threads.c -lpthread -lm
+  time ./threads <qtd de Threads> <tamanho do vetor>
+  ```
