@@ -4,7 +4,7 @@
 #include <math.h>
 
 int contadorGlobal = 0;  
-pthread_mutex_t mutex;   // Mutex para proteger o contador global
+pthread_mutex_t mutex;
 
 int ehPrimo(int numero) {
     if (numero < 2) return 0;
