@@ -19,9 +19,9 @@ void *contarPrimos(void *arg) {
     int qtdThreads = ((int *)arg)[1];
     int tamanhoVetor = ((int *)arg)[2];
 
-    int tamanhoDIvidido = tamanhoVetor / qtdThreads;
-    int inicio = id * tamanhoDIvidido;
-    int fim = (id == qtdThreads - 1) ? tamanhoVetor : inicio + tamanhoDIvidido;
+    int tamanhoDividido = tamanhoVetor / qtdThreads;
+    int inicio = id * tamanhoDividido;
+    int fim = (id == qtdThreads - 1) ? tamanhoVetor : inicio + tamanhoDividido;
 
     int contadorLocal = 0;
     for (int i = inicio; i < fim; i++) {
